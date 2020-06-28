@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://thymeleaf.org">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mind Dump</title>
+  <div th:replace="/fragments/styling :: head-style"></div>
+</head>
+
+<body>
+  <div class="container">
+    <div th:replace="/fragments/navbar :: navbar"></div>
+
+    <div class="row">
+      <div class="col-md">
+        <h1>Mind Dump</h1>
+        <h3>The best place to dump some of your best ideas!</h3>
+      </div>
+    </div>
+    <div th:replace="/fragments/posts :: posts"></div>
+    <div class="row">
+      <div class="col-xl">
+        <a href="/blogposts/new">
+          <button class="btn btn-primary">Submit A New Blog Post</button>
+        </a>
+      </div>
+    </div>
+  </div>
+  <div th:replace="/fragments/styling :: body-links"></div>
+</body>
+
+</html>

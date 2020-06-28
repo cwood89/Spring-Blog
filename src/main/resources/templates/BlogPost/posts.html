@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mind Dump</title>
+  <div th:replace="/fragments/styling :: head-style"></div>
+</head>
+
+<body>
+  <div class="container">
+    <div th:replace="/fragments/navbar :: navbar"></div>
+    <h1>All Posts</h1>
+    <div th:replace="/fragments/posts :: posts"></div>
+  </div>
+  <div th:replace="/fragments/styling :: body-links"></div>
+</body>
+
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mind Dump</title>
+</head>
+
+<body>
+  <div class="row" th:fragment="posts">
+    <div th:each="blog:${posts}">
+      <div class="col-sm">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title" th:text="${blog.title}"></h5>
+            <p th:text="${blog.author}"></p>
+            <p th:text="${blog.blogEntry}"></p>
+          </div>
+          <div class="card-footer"></div>
+        </div><!-- End of .card -->
+      </div><!-- End of .col-sm -->
+    </div><!-- End of posts loop -->
+  </div>
+</body>
+
+</html>
