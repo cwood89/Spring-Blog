@@ -18,7 +18,20 @@
         <h3>The best place to dump some of your best ideas!</h3>
       </div>
     </div>
-    <div th:replace="/fragments/posts :: posts"></div>
+    <div class="row">
+      <div th:each="blog:${posts}">
+        <div class="col-sm">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title" th:text="${blog.title}"></h5>
+              <p th:text="${blog.author}"></p>
+              <p th:text="${blog.blogEntry}"></p>
+            </div>
+            <div class="card-footer"></div>
+          </div><!-- End of .card -->
+        </div><!-- End of .col-sm -->
+      </div><!-- End of posts loop -->
+    </div>
     <div class="row">
       <div class="col-xl">
         <a href="/blogposts/new">

@@ -15,24 +15,19 @@
 
 		<div class="row">
 			<div class="col-xl">
-				<h3>Blog Post Form</h3>
-				<p>Thank you for your submission!</p>
 
-				<h4>Blog Post</h4>
-				<p th:text="${title}"></p>
-				<p th:text="${author}"></p>
-				<p th:text="${blogEntry}"></p>
-			</div>
-		</div>
+				<h4>Thank you for your submission!</h4>
 
-		<div class="row">
-			<div class="col-md">
-				<a href="/">
-					<button class="btn btn-primary">Return Home</button>
-				</a>
-				<a href="/blogposts/new">
-					<button class="btn btn-secondary">Create Another Blog Post</button>
-				</a>
+				<div class="card" style="width: 18rem;">
+					<div class="card-body">
+						<h5 class="card-title" th:text="${blogPost.title}"></h5>
+						<h6 class="card-subtitle mb-2 text-muted" th:text="${blogPost.author}"></h6>
+						<p class="card-text" th:text="${blogPost.blogEntry}"></p>
+						<a href="/" class="card-link">Return Home</a>
+						<a href="#" th:href="@{/blogposts/{id}(id=${blogPost.id})}" class="card-link">Edit Post</a>
+						<a href="/blogposts/new" class="card-link">Create Another Post</a>
+					</div>
+				</div>
 			</div>
 		</div>
 	</div>
